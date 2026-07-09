@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+.venv312/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test / Cache
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Generated output
+reports/
+data/example_pose.csv
+
+# Models (too large for git)
+models/*.task
+models/*.tflite
+
+# Node (if any)
+node_modules/

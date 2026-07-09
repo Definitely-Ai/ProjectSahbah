@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pose-jitter-lab"
+version = "0.1.0"
+description = "Thesis-grade pose jitter normalization and comparison tools for MediaPipe and stereo vision."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scipy>=1.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+live = [
+  "mediapipe>=0.10.35",
+  "opencv-contrib-python>=4.11",
+]
+
+[project.scripts]
+pose-jitter = "pose_jitter_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
