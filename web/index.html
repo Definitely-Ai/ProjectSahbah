@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Pose Jitter Lab — Live Motion Analysis</title>
-  <meta name="description" content="Real-time pose jitter analysis using MediaPipe. Live camera, video upload, or CSV. Publication-ready results instantly in your browser.">
+  <title>Project Sahbah — Pose Jitter Analysis</title>
+  <meta name="description" content="Sahbah's thesis tool for comparing MediaPipe 2D vs stereo vision 3D pose jitter using shoulder-normalized metrics.">
   <meta name="theme-color" content="#0b0f19">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,12 @@
       <div class="nav-logo-wrap">
         <svg class="nav-logo-svg" width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="5" r="3" fill="var(--accent)"/><line x1="14" y1="8" x2="14" y2="18" stroke="var(--accent)" stroke-width="2"/><line x1="14" y1="11" x2="8" y2="15" stroke="var(--accent)" stroke-width="2"/><line x1="14" y1="11" x2="20" y2="15" stroke="var(--accent)" stroke-width="2"/><line x1="14" y1="18" x2="9" y2="25" stroke="var(--accent)" stroke-width="2"/><line x1="14" y1="18" x2="19" y2="25" stroke="var(--accent)" stroke-width="2"/><circle cx="8" cy="15" r="1.5" fill="var(--accent-2)"/><circle cx="20" cy="15" r="1.5" fill="var(--accent-2)"/><circle cx="9" cy="25" r="1.5" fill="var(--accent-3)"/><circle cx="19" cy="25" r="1.5" fill="var(--accent-3)"/></svg>
       </div>
-      <span class="nav-title">Pose Jitter Lab</span>
-      <span class="nav-version">v2.0</span>
+      <span class="nav-title">Project Sahbah</span>
+      <span class="nav-version">Thesis Tool</span>
     </div>
     <div class="nav-links" id="navLinks">
       <a href="#hero" class="nav-link active">Home</a>
+      <a href="#quickstart" class="nav-link">Quick Start</a>
       <a href="#capture" class="nav-link">Capture</a>
       <a href="#methodology" class="nav-link">Method</a>
       <a href="#about" class="nav-link">About</a>
@@ -47,25 +48,99 @@
     <div class="hero-content anim-up">
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        Thesis-Grade · Real-Time · Privacy-First
+        Built for your thesis · By your boy 🤙
       </div>
-      <h1>Analyze Pose Jitter<br><span class="gradient-text">Live in Your Browser</span></h1>
-      <p class="hero-sub">Open your webcam, upload a video, or drop a CSV — get shoulder-normalized jitter analysis with publication-ready statistics. Everything runs locally. Your data never leaves your device.</p>
+      <h1>Hey Sahbah 👋<br><span class="gradient-text">Your Jitter Lab is Ready</span></h1>
+      <p class="hero-sub">This tool runs <strong>MediaPipe pose detection</strong> directly in your browser — just open your webcam, upload a video, or drop in a CSV from your stereo rig. It computes shoulder-normalized jitter so you can <strong>compare 2D vs 3D systems</strong> head-to-head. No servers, no uploads, everything stays on your machine.</p>
       <div class="hero-actions">
-        <a href="#capture" class="btn btn-primary btn-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-          Open Camera
+        <a href="#quickstart" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          How to Use This
         </a>
-        <a href="#capture" class="btn btn-glass btn-lg" data-mode="video">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          Upload File
+        <a href="#capture" class="btn btn-glass btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          Jump to Capture
         </a>
       </div>
       <div class="hero-features">
         <div class="hero-feat"><span class="feat-icon">📷</span><span>Live Webcam</span></div>
         <div class="hero-feat"><span class="feat-icon">🎬</span><span>Video Upload</span></div>
-        <div class="hero-feat"><span class="feat-icon">📊</span><span>CSV Analysis</span></div>
+        <div class="hero-feat"><span class="feat-icon">📊</span><span>CSV / Stereo Data</span></div>
         <div class="hero-feat"><span class="feat-icon">🔒</span><span>100% Local</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Quick Start Guide ─────────────────────── -->
+  <section class="section section-alt" id="quickstart">
+    <div class="container">
+      <div class="section-header">
+        <h2>Quick Start Guide 🚀</h2>
+        <p>Three ways to get jitter data. Pick whichever fits your workflow.</p>
+      </div>
+
+      <div class="guide-grid">
+        <!-- Option A -->
+        <div class="guide-card">
+          <div class="guide-num">A</div>
+          <h4>📷 Live Camera</h4>
+          <p class="guide-desc">Use your webcam (or your stereo rig camera) to capture MediaPipe landmarks in real-time.</p>
+          <ol class="guide-steps">
+            <li>Scroll down to <strong>Capture</strong> and select <strong>Live Camera</strong></li>
+            <li>Wait for the model to load (~4 MB, one-time download)</li>
+            <li>Click <strong>Start Camera</strong> — grant camera permission if asked</li>
+            <li>You'll see your skeleton overlay and live jitter numbers</li>
+            <li>Click <strong>Record</strong> when ready, stand still or move as needed</li>
+            <li>Click <strong>Stop Rec</strong> then <strong>Analyze Recording</strong></li>
+            <li>Full stats, charts, and export buttons appear below ✅</li>
+          </ol>
+          <div class="guide-tip">💡 <strong>Pro tip:</strong> Use a tripod and consistent lighting. The app requests 1080p for maximum accuracy.</div>
+        </div>
+
+        <!-- Option B -->
+        <div class="guide-card">
+          <div class="guide-num">B</div>
+          <h4>🎬 Upload Video</h4>
+          <p class="guide-desc">Already recorded a video? Drop it in and let MediaPipe process every frame.</p>
+          <ol class="guide-steps">
+            <li>Select the <strong>Upload Video</strong> tab</li>
+            <li>Drag &amp; drop your video (MP4, WebM, MOV)</li>
+            <li>Watch the progress bar as each frame is analyzed</li>
+            <li>Click <strong>Analyze Results</strong> when done</li>
+          </ol>
+          <div class="guide-tip">💡 <strong>Pro tip:</strong> Shorter clips process faster. A 30-second clip at 30fps = 900 frames.</div>
+        </div>
+
+        <!-- Option C -->
+        <div class="guide-card">
+          <div class="guide-num">C</div>
+          <h4>📊 Upload CSV</h4>
+          <p class="guide-desc">Got data from your stereo vision rig or an exported MediaPipe run? Drop the CSV here.</p>
+          <ol class="guide-steps">
+            <li>Select the <strong>Upload CSV</strong> tab</li>
+            <li>Drop or browse for your CSV file</li>
+            <li>Set shoulder mode (Trial Median is recommended)</li>
+            <li>Confirm shoulder joint names match your column headers</li>
+            <li>Click <strong>Run Analysis</strong></li>
+          </ol>
+          <div class="guide-tip">💡 <strong>Your CSV needs these columns:</strong> <code>source, domain, trial, frame, joint, x, y</code> — and optionally <code>z</code>. See the methodology section for what each field means.</div>
+        </div>
+      </div>
+
+      <!-- What you get -->
+      <div class="guide-output anim-up">
+        <h3>📋 What You Get</h3>
+        <p>After any capture method, you'll see:</p>
+        <div class="output-grid">
+          <div class="output-item"><strong>Executive Summary</strong><span>Plain-English finding — copy-paste into your thesis</span></div>
+          <div class="output-item"><strong>Stats Dashboard</strong><span>Row counts, frame pairs, trials, joint counts</span></div>
+          <div class="output-item"><strong>Insight Cards</strong><span>Data integrity, peak jitter joint, cross-domain gap, shoulder stability</span></div>
+          <div class="output-item"><strong>5 Charts</strong><span>Bar, distribution, temporal trace, CDF, and shoulder width</span></div>
+          <div class="output-item"><strong>Summary Table</strong><span>Per-joint normalized mean, std, and P95 values</span></div>
+          <div class="output-item"><strong>Quality Gates</strong><span>Automated checks — everything green means you're good</span></div>
+          <div class="output-item"><strong>CSV Export</strong><span>Download summary or raw frame data for your own analysis</span></div>
+          <div class="output-item"><strong>Multiple Sources</strong><span>Upload both MediaPipe + stereo CSV to compare side-by-side</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -73,6 +148,11 @@
   <!-- ── Capture Section ─────────────────────── -->
   <section class="section" id="capture">
     <div class="container">
+      <div class="section-header">
+        <h2>Capture &amp; Analyze</h2>
+        <p>Pick your input mode below. All processing happens right here in your browser.</p>
+      </div>
+
       <!-- Mode Tabs -->
       <div class="mode-tabs" id="modeTabs">
         <button class="mode-tab active" data-mode="camera" id="tabCamera">
@@ -99,7 +179,7 @@
               <svg class="loader-brain" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M9.5 2A5.5 5.5 0 0 0 4 7.5c0 1.28.44 2.46 1.17 3.39A5.5 5.5 0 0 0 4 14.5 5.5 5.5 0 0 0 9.5 20h5a5.5 5.5 0 0 0 5.5-5.5c0-1.28-.44-2.46-1.17-3.39A5.5 5.5 0 0 0 20 7.5 5.5 5.5 0 0 0 14.5 2h-5z"/><path d="M12 2v20"/></svg>
             </div>
             <h3>Loading Pose Model</h3>
-            <p>Downloading MediaPipe Pose Landmarker (~4 MB)...</p>
+            <p>Downloading MediaPipe Pose Landmarker (~4 MB)... First load takes a moment, then it's cached.</p>
             <div class="loader-bar"><div class="loader-bar-fill" id="modelProgress"></div></div>
           </div>
         </div>
@@ -112,7 +192,7 @@
             <div class="viewport-overlay" id="viewportOverlay">
               <div class="overlay-message">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-                <p>Click <strong>Start Camera</strong> below</p>
+                <p>Click <strong>Start Camera</strong> below to begin</p>
               </div>
             </div>
             <!-- Live HUD -->
@@ -158,7 +238,7 @@
 
         <!-- Live jitter dashboard -->
         <div class="live-dashboard" id="liveDashboard" style="display:none">
-          <h3 class="dash-title">Live Jitter Dashboard</h3>
+          <h3 class="dash-title">📊 Live Jitter Dashboard</h3>
           <div class="dash-grid">
             <div class="dash-card">
               <span class="dash-label">Shoulder Width</span>
@@ -193,7 +273,7 @@
           </div>
           <strong>Drop a video file here</strong>
           <span class="upload-sub">or <span class="upload-link">browse files</span></span>
-          <span class="upload-hint">MP4, WebM, MOV — processed frame-by-frame locally</span>
+          <span class="upload-hint">MP4, WebM, MOV — each frame gets processed by MediaPipe locally</span>
           <input type="file" id="videoInput" accept="video/*" hidden>
         </div>
         <!-- Video processing -->
@@ -231,7 +311,7 @@
           </div>
           <strong>Drop your pose CSV here</strong>
           <span class="upload-sub">or <span class="upload-link">browse files</span></span>
-          <span class="upload-hint">Long-form CSV with frame, joint, x, y columns</span>
+          <span class="upload-hint">Columns: source, domain, trial, frame, joint, x, y (and optionally z)</span>
           <input type="file" id="csvInput" accept=".csv,.txt,.tsv" hidden>
         </div>
         <div class="csv-options" id="csvOptions" style="display:none">
@@ -243,14 +323,14 @@
           <div class="options-row">
             <div class="opt-group">
               <label for="shoulderMode">Shoulder Mode</label>
-              <select id="shoulderMode"><option value="trial_median" selected>Trial Median</option><option value="frame">Per-Frame</option></select>
+              <select id="shoulderMode"><option value="trial_median" selected>Trial Median (recommended)</option><option value="frame">Per-Frame</option></select>
             </div>
             <div class="opt-group">
-              <label for="leftShoulder">Left Shoulder</label>
+              <label for="leftShoulder">Left Shoulder Column</label>
               <input type="text" id="leftShoulder" value="left_shoulder">
             </div>
             <div class="opt-group">
-              <label for="rightShoulder">Right Shoulder</label>
+              <label for="rightShoulder">Right Shoulder Column</label>
               <input type="text" id="rightShoulder" value="right_shoulder">
             </div>
           </div>
@@ -271,7 +351,7 @@
       <div class="loading-overlay" id="loadingOverlay" style="display:none">
         <div class="loading-card">
           <div class="loading-spinner"></div>
-          <p class="loading-text" id="loadingText">Analyzing...</p>
+          <p class="loading-text" id="loadingText">Crunching numbers...</p>
         </div>
       </div>
     </div>
@@ -281,7 +361,7 @@
   <section class="section section-results" id="results" style="display:none">
     <div class="container">
       <div class="section-header">
-        <h2>Analysis Results</h2>
+        <h2>📈 Your Results</h2>
         <p id="resultsSub"></p>
       </div>
       <div class="stats-row" id="statsGrid"></div>
@@ -294,7 +374,7 @@
         <div class="card"><h3>Cumulative Distribution</h3><div class="chart-wrap"><canvas id="chartCdf"></canvas></div></div>
         <div class="card"><h3>Shoulder Width Stability</h3><div class="chart-wrap"><canvas id="chartShoulder"></canvas></div></div>
       </div>
-      <div class="card card-wide"><h3>Jitter Summary</h3><div class="table-scroll" id="summaryTableWrap"></div></div>
+      <div class="card card-wide"><h3>Jitter Summary Table</h3><div class="table-scroll" id="summaryTableWrap"></div></div>
       <div class="card card-wide"><h3>Quality Gates</h3><div class="table-scroll" id="qualityTableWrap"></div></div>
       <div class="export-bar">
         <button class="btn btn-primary" id="exportCsv">↓ Summary CSV</button>
@@ -307,32 +387,66 @@
   <!-- ── Methodology ─────────────────────────── -->
   <section class="section section-alt" id="methodology">
     <div class="container">
-      <div class="section-header"><h2>Methodology</h2><p>The mathematics behind shoulder-normalized jitter comparison.</p></div>
-      <div class="method-steps">
-        <div class="method-step"><div class="step-num">01</div><h4>Raw Displacement</h4><p>Frame-to-frame Euclidean distance of each landmark in its native coordinate space.</p><code>d(f) = ‖p(f) − p(f−1)‖₂</code></div>
-        <div class="method-step"><div class="step-num">02</div><h4>Shoulder Width</h4><p>Left-to-right shoulder distance in the same coordinate domain.</p><code>w(f) = ‖shoulder_R − shoulder_L‖</code></div>
-        <div class="method-step"><div class="step-num">03</div><h4>Normalization</h4><p>Divide displacement by median shoulder width — a dimensionless, body-relative metric.</p><code>J(f) = d(f) / median(w)</code></div>
-        <div class="method-step"><div class="step-num">04</div><h4>Cross-Domain</h4><p>Compare MediaPipe (0–1 normalized) and stereo vision (mm) using the same dimensionless unit.</p><code>No false unit conversion needed</code></div>
+      <div class="section-header">
+        <h2>The Math (Don't Worry, It's Simple) 🧮</h2>
+        <p>Here's exactly what happens under the hood when we compute jitter. Four steps, that's it.</p>
       </div>
-      <blockquote class="method-quote">"Jitter was computed as the Euclidean displacement of each landmark between consecutive frames within its native coordinate domain. Each displacement was divided by shoulder width measured in the same domain, yielding a dimensionless, body-relative metric suitable for cross-system comparison."</blockquote>
+      <div class="method-steps">
+        <div class="method-step">
+          <div class="step-num">01</div>
+          <h4>Measure Movement</h4>
+          <p>For each body landmark (wrist, elbow, etc.), we measure how far it moved between two consecutive frames. That's just Euclidean distance in whatever coordinate space you're in.</p>
+          <code>d(f) = ‖p(f) − p(f−1)‖₂</code>
+        </div>
+        <div class="method-step">
+          <div class="step-num">02</div>
+          <h4>Measure Shoulder Width</h4>
+          <p>We also compute your shoulder width in the same frame using the same units. This becomes our "ruler" to normalize against — because a person far from the camera looks smaller but shouldn't register more jitter.</p>
+          <code>w(f) = ‖shoulder_R − shoulder_L‖</code>
+        </div>
+        <div class="method-step">
+          <div class="step-num">03</div>
+          <h4>Normalize</h4>
+          <p>Divide the displacement by the median shoulder width for the trial. Now you get a <strong>dimensionless number</strong> — "0.02 shoulder widths of jitter per frame." This works in <em>any</em> coordinate space.</p>
+          <code>J(f) = d(f) / median(w)</code>
+        </div>
+        <div class="method-step">
+          <div class="step-num">04</div>
+          <h4>Compare Across Systems</h4>
+          <p>MediaPipe gives coordinates in 0–1 normalized space. Your stereo rig gives millimeters. But since both jitter values are in "shoulder widths," you can directly compare them. <strong>No fake unit conversion needed.</strong></p>
+          <code>J_mediapipe ↔ J_stereo (same unit!)</code>
+        </div>
+      </div>
+      <blockquote class="method-quote">"Jitter was computed as the Euclidean displacement of each landmark between consecutive frames within its native coordinate domain. Each displacement was divided by shoulder width measured in the same domain, yielding a dimensionless, body-relative metric suitable for cross-system comparison."<br><br><strong>— Copy this into your thesis methodology section 📝</strong></blockquote>
     </div>
   </section>
 
   <!-- ── About ───────────────────────────────── -->
   <section class="section" id="about">
     <div class="container">
-      <div class="section-header"><h2>About</h2><p>Built for research. Open source.</p></div>
+      <div class="section-header">
+        <h2>About This Tool 🛠️</h2>
+        <p>Custom-built for Sahbah's thesis research on pose estimation jitter.</p>
+      </div>
       <div class="about-grid">
-        <div class="about-card anim-up"><span class="about-icon">🔒</span><h4>Privacy First</h4><p>All analysis runs in your browser via WebAssembly. Your video and pose data never leave your device.</p></div>
-        <div class="about-card anim-up"><span class="about-icon">📱</span><h4>Works Everywhere</h4><p>Responsive design for desktop, tablet, and mobile. Use your phone's camera in the field.</p></div>
-        <div class="about-card anim-up"><span class="about-icon">🧪</span><h4>60 Unit Tests</h4><p>The Python backend has comprehensive test coverage for every statistical function.</p></div>
-        <div class="about-card anim-up"><span class="about-icon">📊</span><h4>Publication Ready</h4><p>Export CSVs, view Bland-Altman plots, ICC, bootstrap CIs, and quality scorecards.</p></div>
+        <div class="about-card anim-up"><span class="about-icon">🔒</span><h4>Privacy First</h4><p>All analysis runs in your browser via WebAssembly. Your video and pose data never leave your device. No server, no cloud, no worries.</p></div>
+        <div class="about-card anim-up"><span class="about-icon">📱</span><h4>Works on Your Phone Too</h4><p>Responsive design for desktop, tablet, and mobile. You could literally run this in the field using your phone camera.</p></div>
+        <div class="about-card anim-up"><span class="about-icon">🧪</span><h4>Battle-Tested Math</h4><p>60 unit tests cover every statistical function — Euclidean distances, shoulder normalization, quality gates, cross-domain stats, all of it.</p></div>
+        <div class="about-card anim-up"><span class="about-icon">📊</span><h4>Thesis-Ready Output</h4><p>Export CSVs, screenshot the charts, and the executive summary is already written in thesis-friendly language. You're welcome 😎</p></div>
+      </div>
+      <div class="about-note anim-up">
+        <p>🤝 Built by <a href="https://aidreambuilders.com" target="_blank">AI Dream Builders LLC</a> in collaboration with Sahbah for his thesis research. Now go crush that defense.<br>If anything breaks or you need a new feature, you know where to find me.</p>
       </div>
     </div>
   </section>
 
   <!-- ── Footer ──────────────────────────────── -->
-  <footer class="footer"><div class="container"><p>Pose Jitter Lab · <a href="https://github.com/Definitely-Ai/ProjectSahbah" target="_blank" rel="noopener">GitHub</a></p></div></footer>
+  <footer class="footer">
+    <div class="container">
+      <p>Project Sahbah · Built by <a href="https://aidreambuilders.com" target="_blank" rel="noopener">AI Dream Builders LLC</a> in collaboration with Sahbah for his research</p>
+      <p style="margin-top:4px"><a href="https://github.com/Definitely-Ai/ProjectSahbah" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
 
   <!-- ── Log Panel ───────────────────────────── -->
   <div class="log-panel" id="logPanel">

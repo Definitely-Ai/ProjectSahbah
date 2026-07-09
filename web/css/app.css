@@ -304,10 +304,37 @@ a:hover{color:var(--accent-2)}
 .log-entry{padding:2px 0;border-bottom:1px solid rgba(255,255,255,.02)}
 .log-info{color:var(--accent)}.log-warn{color:var(--warn)}.log-error{color:var(--danger)}.log-debug{color:var(--muted)}
 
+/* ── Quick Start Guide ──────────────────────────────────────── */
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:32px}
+.guide-card{background:var(--surface-solid);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;transition:transform .25s var(--ease),box-shadow .25s}
+.guide-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.guide-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:var(--accent-bg);border:1px solid rgba(20,184,166,.2);color:var(--accent);font-weight:900;font-size:.9rem;margin-bottom:12px}
+.guide-card h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+.guide-desc{color:var(--muted);font-size:.88rem;margin-bottom:14px;line-height:1.6}
+.guide-steps{padding-left:20px;margin-bottom:14px}
+.guide-steps li{font-size:.84rem;color:var(--ink-2);margin-bottom:6px;line-height:1.5}
+.guide-steps li strong{color:var(--ink)}
+.guide-tip{background:var(--accent-bg);border:1px solid rgba(20,184,166,.12);border-radius:8px;padding:10px 14px;font-size:.8rem;color:var(--ink-2);line-height:1.5}
+.guide-tip strong{color:var(--accent)}
+.guide-tip code{background:var(--bg);padding:2px 6px;border-radius:4px;font-family:var(--mono);font-size:.75rem;color:var(--accent)}
+
+.guide-output{background:var(--surface-solid);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px}
+.guide-output h3{font-size:1.1rem;font-weight:700;margin-bottom:6px}
+.guide-output>p{color:var(--muted);font-size:.88rem;margin-bottom:16px}
+.output-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.output-item{padding:12px 14px;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius)}
+.output-item strong{display:block;font-size:.82rem;margin-bottom:2px}
+.output-item span{font-size:.78rem;color:var(--muted);line-height:1.4}
+
+/* ── About Note ────────────────────────────────────────────── */
+.about-note{margin-top:28px;padding:20px 24px;background:var(--accent-bg);border:1px solid rgba(20,184,166,.15);border-radius:var(--radius-lg);text-align:center}
+.about-note p{font-size:.92rem;color:var(--ink-2);line-height:1.7}
+.about-note a{color:var(--accent);font-weight:600}
+
 /* ── Responsive ────────────────────────────────────────────── */
 @media(max-width:768px){
   .nav-links{display:none}
-  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--surface-solid);border-bottom:1px solid var(--line);padding:12px 20px;gap:4px;box-shadow:var(--shadow)}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--surface-solid);border-bottom:1px solid var(--line);padding:12px 20px;gap:4px;box-shadow:var(--shadow);z-index:100}
   .mobile-only{display:flex}
   .hero{min-height:85vh;padding-top:calc(var(--nav-h)+20px)}
   .hero h1{font-size:1.8rem}
@@ -321,18 +348,22 @@ a:hover{color:var(--accent-2)}
   .controls-left,.controls-center,.controls-right{justify-content:center}
   .log-content{width:280px}
   .export-bar{flex-direction:column;align-items:stretch}
+  .guide-grid{grid-template-columns:1fr}
+  .output-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:420px){
   .container{padding:0 14px}
   .stats-row{grid-template-columns:repeat(2,1fr)}
   .hero-actions{flex-direction:column;align-items:center}
   .viewport-container{aspect-ratio:4/3}
+  .output-grid{grid-template-columns:1fr}
+  .guide-card{padding:18px}
 }
 
 /* ── Print ─────────────────────────────────────────────────── */
 @media print{
   .navbar,.hero,.mode-tabs,.camera-viewport,.live-dashboard,.upload-zone,.csv-options,
-  .export-bar,.log-panel,.mobile-only,.footer,#about,#methodology,.toast,.loading-overlay,.model-loader,
+  .export-bar,.log-panel,.mobile-only,.footer,#about,#methodology,#quickstart,.toast,.loading-overlay,.model-loader,
   .video-processor{display:none!important}
   body{background:#fff;color:#000;font-size:10pt}
   .section,.section-alt,.section-results{background:#fff;padding:16px 0}
