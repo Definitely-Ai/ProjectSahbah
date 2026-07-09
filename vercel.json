@@ -1,6 +1,8 @@
 {
   "version": 2,
-  "buildCommand": null,
+  "framework": null,
+  "installCommand": "echo skip",
+  "buildCommand": "",
   "outputDirectory": "web",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
